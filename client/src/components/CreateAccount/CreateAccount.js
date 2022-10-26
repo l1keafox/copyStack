@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useExistingUserContext } from "../../utils/existingUserContext";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
@@ -9,6 +10,7 @@ function CreateAccount() {
   const [reTypePassWord, setReTypePassword] = useState("");
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const { toggleExistingUser, setLogin } = useExistingUserContext();
   const [signUp] = useMutation(ADD_USER);
 
   const handleInputChange = (e) => {
@@ -41,6 +43,7 @@ function CreateAccount() {
         variables: { username, email, password },
       });
       Auth.login(data.addUser.token);
+      setLogin(true);
     } catch (e) {
       console.error(e);
     }
@@ -120,7 +123,7 @@ function CreateAccount() {
             backgroundColor: "black",
           }}
         />
-        <button className="loginSubmitBtn">
+        <button className="loginSubmitBtn" onClick={toggleExistingUser}>
           Return to Login 
         </button>
       </div>

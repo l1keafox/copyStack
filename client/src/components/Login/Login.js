@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
+import { useExistingUserContext } from "../../utils/existingUserContext";
 import Auth from "../../utils/auth";
 
 const Login = (props) => {
+  const { toggleExistingUser, setLogin } = useExistingUserContext();
 
   const [formState, setFormState] = useState({ username: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -29,6 +31,8 @@ const Login = (props) => {
       });
 
       Auth.login(data.login.token);
+      toggleExistingUser(true);
+      setLogin(true);
     } catch (e) {
       console.error(e);
     }
@@ -82,7 +86,7 @@ const Login = (props) => {
               backgroundColor: "black",
             }}
           />
-          <button className="createNewAccountBtn" >
+          <button className="createNewAccountBtn" onClick={toggleExistingUser}>
             Create Account 
           </button>
         </form>
