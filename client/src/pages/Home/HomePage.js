@@ -17,8 +17,6 @@ function HomePage() {
   const { data } = useQuery(GET_GAME_CARDS,{
     nextFetchPolicy:"network-only",
   }); //async not functioning
-  const [scores, setScore] = useState([]);
-  const [gameTitle, setGameTitle] = useState("");
   useEffect(() => {
     if (data && data.gameCards) {
       const gameCards = data.gameCards;

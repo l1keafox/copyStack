@@ -1,5 +1,5 @@
 {
-  "name": "Lanista",
+  "name": "copyStack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/l1keafox/Lanista.git"
+    "url": "git+https://github.com/l1keafox/copyStack.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/l1keafox/Lanista/issues"
+    "url": "https://github.com/l1keafox/copyStack/issues"
   },
-  "homepage": "https://github.com/l1keafox/Lanista#readme",
+  "homepage": "https://github.com/l1keafox/copyStack#readme",
   "dependencies": {
     "apollo-server-express": "^3.10.3",
     "concurrently": "^7.4.0",

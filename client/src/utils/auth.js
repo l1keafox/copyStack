@@ -6,7 +6,10 @@ class AuthService {
 	getUser() {
 		// adding logic here to make sure when there is a token.
 		let token = this.getToken();
-		if (!token) return false;
+		if (!token) {
+			console.log('No token');
+			return false;
+		}
 		return decode(token);
 	}
 
@@ -24,8 +27,8 @@ class AuthService {
 	login(idToken) {
 		// Saves user token to localStorage and reloads the application for logged in status to take effect
 
-		console.log(idToken, "LOGGED IN?");
-		console.log(decode(idToken));
+		console.log(idToken, "LOGGED IN?",decode(idToken));
+		
 		localStorage.setItem("id_token", idToken);
 		//window.location.assign("/games");
 	}
