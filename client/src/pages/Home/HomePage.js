@@ -14,9 +14,6 @@ import auth from "../../utils/auth";
 function HomePage() {
   const { existingUser } = useExistingUserContext();
 
-  const [scores, setScore] = useState([]);
-  const [gameTitle, setGameTitle] = useState("");
-
   return (
     <div className="homeViewContainer">
       {/* scoreboard component - currently just placeholder */}
