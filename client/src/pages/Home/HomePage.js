@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // stylesheet
-import { useQuery } from "@apollo/client";
+// import { useQuery } from "@apollo/client";
 
 // components
 import Login from "../../components/Login/Login.js";
@@ -16,8 +16,6 @@ function HomePage() {
 
   return (
     <div className="homeViewContainer">
-      {/* scoreboard component - currently just placeholder */}
-      {/* conditionally renders <Login /> versus <CreateUser /> based on global context variable */}
       {auth.loggedIn() ? <div /> : existingUser ? <Login /> : <CreateAccount />}
     </div>
   );

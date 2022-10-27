@@ -1,6 +1,6 @@
 {
-  "short_name": "copyStack",
-  "name": "copyStack",
+  "short_name": "jobTracker",
+  "name": "jobTracker",
   "icons": [
     {
       "src": "favicon.ico",
