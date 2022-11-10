@@ -1,5 +1,5 @@
 const { gql } = require("apollo-server-express");
-const { User, Channel, GameCard, Settings } = require("./../models");
+const { User } = require("./../models");
 
 const typeDefs = gql`
 	scalar Date
