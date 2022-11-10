@@ -26,8 +26,10 @@
   },
   "homepage": "https://github.com/l1keafox/copyStack#readme",
   "dependencies": {
+    "@apollo/server": "^4.1.1",
     "apollo-server-express": "^3.10.3",
     "concurrently": "^7.4.0",
+    "graphql": "^16.6.0",
     "jsonwebtoken": "^8.5.1"
   }
 }
