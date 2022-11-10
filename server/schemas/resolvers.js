@@ -1,4 +1,4 @@
-const { User, Channel } = require("../models");
+const { User } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { GraphQLScalarType, Kind } = require("graphql");
 const { signToken } = require("../utils/auth");
@@ -45,8 +45,8 @@ const resolvers = {
   },
 
   Mutation: {
-    //creates a channel, only needs channel name
-    //adds a single message to a channel by id
+    
+    
 
     //adds a user to the database, used on signup.
     addUser: async (parent, { username, email, password }) => {
